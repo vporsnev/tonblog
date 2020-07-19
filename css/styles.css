@@ -1,0 +1,124 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #00000;
+}
+
+#home {
+  height: auto;
+}
+
+#blog-post1 {
+  background-image: url(../images/salat.jpg);
+}
+
+#blog-post2 {
+  background-image: url(../images/syvensteinsee.jpeg);
+}
+
+/* Create a Parallax Effect */
+.bgimg-1 {
+  background-attachment:scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#blog-post1, #blog-post2 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 10rem 5rem;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url(../images/landing.png);
+  min-height: 100%;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-width: 1000px) {
+  #blog-post1, #blog-post2 {
+    margin: 0;
+  }
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+  overflow: hidden;
+}
+
+#blog-post1:hover .overlay {
+  opacity: 0.75;
+}
+
+#blog-post2:hover .overlay {
+  opacity: 0.75;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  text-align: left;
+  top: 70%;
+  padding: 2rem;
+}
+
+.navbar {
+  line-height: 3rem;
+  opacity: 0.75;
+  background-color: white;
+}
+.navbar-brand {
+  padding-left: 3rem;
+}
+.navbar-nav > li{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.navbar-collapse {
+  text-align: right;
+}
+
+
+.next-page-button {
+ text-align: center;
+ margin: 5rem;
+}
+
+.btn-block {
+  background-color: gray;
+}
+
+.post-content {
+  margin: 0 5rem;
+}
+
+#salad-post {
+  background-image: url(../images/salat.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5rem 5rem;
+}
