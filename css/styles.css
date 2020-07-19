@@ -10,10 +10,12 @@ body, html {
 
 #blog-post1 {
   background-image: url(../images/salat.jpg);
+  width: auto;
 }
 
 #blog-post2 {
   background-image: url(../images/syvensteinsee.jpeg);
+  width: auto;
 }
 
 /* Create a Parallax Effect */
@@ -22,6 +24,7 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  width: auto;
 }
 
 #blog-post1, #blog-post2 {
