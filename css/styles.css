@@ -42,10 +42,13 @@ body, html {
 .w3-hover-opacity {cursor: pointer;}
 
 /* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-width: 1000px) {
-  #blog-post1, #blog-post2 {
+@media only screen and (max-width: 1024px) {
+  #blog-post1, #blog-post2, #salad-post {
     background-attachment: scroll !important;
     margin: 2rem 0 2rem 0;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
   }
   .navbar {
     display: flex;
@@ -121,5 +124,5 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 5%;
+  margin: 0 5% 5% 5%;
 }
