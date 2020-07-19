@@ -45,7 +45,7 @@ body, html {
 @media only screen and (max-width: 1000px) {
   #blog-post1, #blog-post2 {
     background-attachment: scroll !important;
-    margin: 0;
+    margin: 2rem 0 2rem 0;
   }
   .navbar {
     display: flex;
@@ -104,7 +104,7 @@ body, html {
 
 .next-page-button {
  text-align: center;
- margin: 5rem;
+ margin: 2rem;
 }
 
 .btn-block {
