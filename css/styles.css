@@ -66,8 +66,17 @@ body, html {
   .bgimg-2 {
     min-height: 50%;
   }
-   .posted-date {
-    margin-left: 0;
+  .posted-date {
+    margin: 0;
+  }
+  .overlay {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .mobile-pic-text {
+    visibility: hidden;
   }
 }
 
@@ -98,8 +107,8 @@ body, html {
   font-size: 20px;
   position: absolute;
   text-align: left;
-  top: 60%;
-  padding: 2rem;
+  bottom: 8px;
+  left: 16px;
 }
 
 .navbar {
@@ -143,7 +152,32 @@ body, html {
   margin: 0 5% 5% 5%;
 }
 
+#bavaria-travel-post {
+  background-image: url(../images/syvensteinsee.jpeg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 5% 5% 5%;
+}
+
 .posted-date {
   margin-left: 5rem;
   font-size: 10px;
+}
+
+a:hover {
+  color: gray;
+  text-decoration: none;
+}
+
+.mobile-pic-text {
+  color: white;
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  background-color: black;
+  opacity: 0.6;
+  padding-left: 5px;
+  padding-right: 5px;
 }
