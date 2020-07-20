@@ -66,6 +66,9 @@ body, html {
   .bgimg-2 {
     min-height: 50%;
   }
+   .posted-date {
+    margin-left: 0;
+  }
 }
 
 .overlay {
