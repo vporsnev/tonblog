@@ -35,7 +35,11 @@ body, html {
 /* First image (Logo. Full height) */
 .bgimg-1 {
   background-image: url(../images/landing.png);
-  min-height: 100%;
+  min-height: 70%;
+}
+
+.bgimg-2 {
+  min-height: 70%;
 }
 
 .w3-wide {letter-spacing: 10px;}
