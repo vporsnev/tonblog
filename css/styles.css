@@ -29,7 +29,7 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 10rem 5rem;
+  margin: 5rem 5rem 0 5rem;
 }
 
 /* First image (Logo. Full height) */
@@ -47,7 +47,7 @@ body, html {
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-width: 1024px) {
-   #blog-post1, #blog-post2, #salad-post {
+  #blog-post1, #blog-post2, #salad-post {
     margin: 2rem 0 0rem 0;
     background-attachment: scroll !important;
     background-size: cover;
@@ -95,7 +95,7 @@ body, html {
   font-size: 20px;
   position: absolute;
   text-align: left;
-  top: 70%;
+  top: 60%;
   padding: 2rem;
 }
 
@@ -124,6 +124,7 @@ body, html {
 
 .btn-block {
   background-color: gray;
+  margin-top: 5rem;
 }
 
 .post-content {
@@ -137,4 +138,9 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 5% 5% 5%;
+}
+
+.posted-date {
+  margin-left: 5rem;
+  font-size: 10px;
 }
