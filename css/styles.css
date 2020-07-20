@@ -46,7 +46,7 @@ body, html {
 .w3-hover-opacity {cursor: pointer;}
 
 /* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1200px) {
   #blog-post1, #blog-post2, #salad-post {
     margin: 2rem 0 0rem 0;
     background-attachment: scroll !important;
@@ -74,7 +74,7 @@ body, html {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   .mobile-pic-text {
     visibility: hidden;
   }
