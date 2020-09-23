@@ -163,12 +163,17 @@ body, html {
 
 .next-page-button {
  text-align: center;
- margin: 2rem;
+ margin: 2rem 2rem 0 2rem;
+}
+
+.previous-page-button {
+ text-align: center;
+ margin: 0 2rem 2rem 2rem;
 }
 
 .btn-block {
   background-color: gray;
-  margin-top: 5rem;
+  margin-top: 0;
 }
 
 .post-content {
