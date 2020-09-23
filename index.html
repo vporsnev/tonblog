@@ -24,37 +24,7 @@
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
       });
     });
-    // Modal Image Gallery
-    function onClick(element) {
-      document.getElementById("img01").src = element.src;
-      document.getElementById("modal01").style.display = "block";
-      var captionText = document.getElementById("caption");
-      captionText.innerHTML = element.alt;
-    }
 
-    // Change style of navbar on scroll
-    window.onscroll = function() {
-      myFunction()
-    };
-
-    function myFunction() {
-      var navbar = document.getElementById("myNavbar");
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-      } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-      }
-    }
-
-    // Used to toggle the menu on small screens when clicking on the menu button
-    function toggleFunction() {
-      var x = document.getElementById("navDemo");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
-      }
-    }
   </script>
 
   <!-- Fontawesome CDN -->
@@ -88,15 +58,15 @@
   </nav>
 
   <!-- First Parallax Image with Logo Text -->
-  <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="bgimg-1 w3-display-container w3-opacity-min shadow p-3 mb-5 bg-white rounded" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
       <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">JT</span>
     </div>
   </div>
 
   <!-- Container (About Section) -->
-  <div class="bgimg-2 w3-display-container w3-opacity-min w3-card-4" id="blog-post1">
-    <a href="salad-post.html"><div class="overlay">
+  <div class="bgimg-2 w3-display-container w3-opacity-min w3-card-4 first-post" id="blog-post">
+    <a href="" data-toggle="modal" data-target=".first"><div class="overlay1">
       <div class="text">
         <h3>Summer Vegetable Salad</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet consectetur nulla eu pulvinar. Nullam tempor facilisis ante. Vivamus elementum mattis purus, feugiat ornare purus posuere eget. Fusce nec est vitae dui luctus
@@ -110,8 +80,8 @@
     </div>
   <div class="posted-date"><p><i>Posted: 19.07.2020</i></p></div>
 
-  <div class="bgimg-2 w3-display-container w3-opacity-min w3-card-4" id="blog-post2">
-      <a href="bavaria-travel-post.html"><div class="overlay">
+  <div class="bgimg-2 w3-display-container w3-opacity-min w3-card-4 second-post" id="blog-post">
+    <a href=".bd-example-modal-xl" data-toggle="modal" data-target=".second"><div class="overlay1">
         <div class="text">
           <h3>Vacation in Bayern</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet consectetur nulla eu pulvinar. Nullam tempor facilisis ante. Vivamus elementum mattis purus, feugiat ornare purus posuere eget. Fusce nec est vitae dui luctus
@@ -129,6 +99,37 @@
   <a href="page2.html"><button type="button" class="btn btn-light btn-block btn-lg next-page">Next Page</button></a>
 </div>
 
+<div class="modal fade bd-example-modal-xl first" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog full_modal-dialog">
+    <div class="modal-content full_modal-content">
+      <img class="modal-post" src="images/salat.jpg" alt="post">
+      <h3>Summer Vegetable Salad</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet consectetur nulla eu pulvinar. Nullam tempor facilisis ante. Vivamus elementum mattis purus, feugiat ornare purus posuere eget. Fusce nec est vitae dui luctus
+        scelerisque sed eget odio. Curabitur eros diam, viverra vitae ultrices id, facilisis in ante. Sed at imperdiet velit...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet consectetur nulla eu pulvinar. Nullam tempor facilisis ante. Vivamus elementum mattis purus, feugiat ornare purus posuere eget. Fusce nec est vitae dui luctus
+          scelerisque sed eget odio. Curabitur eros diam, viverra vitae ultrices id, facilisis in ante. Sed at imperdiet velit...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet consectetur nulla eu pulvinar. Nullam tempor facilisis ante. Vivamus elementum mattis purus, feugiat ornare purus posuere eget. Fusce nec est vitae dui luctus
+            scelerisque sed eget odio. Curabitur eros diam, viverra vitae ultrices id, facilisis in ante. Sed at imperdiet velit...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet consectetur nulla eu pulvinar. Nullam tempor facilisis ante. Vivamus elementum mattis purus, feugiat ornare purus posuere eget. Fusce nec est vitae dui luctus
+              scelerisque sed eget odio. Curabitur eros diam, viverra vitae ultrices id, facilisis in ante. Sed at imperdiet velit...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet consectetur nulla eu pulvinar. Nullam tempor facilisis ante. Vivamus elementum mattis purus, feugiat ornare purus posuere eget. Fusce nec est vitae dui luctus
+                scelerisque sed eget odio. Curabitur eros diam, viverra vitae ultrices id, facilisis in ante. Sed at imperdiet velit...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet consectetur nulla eu pulvinar. Nullam tempor facilisis ante. Vivamus elementum mattis purus, feugiat ornare purus posuere eget. Fusce nec est vitae dui luctus
+                  scelerisque sed eget odio. Curabitur eros diam, viverra vitae ultrices id, facilisis in ante. Sed at imperdiet velit...</p>
+    </div>
+    </div>
+  </div>
+
+  <div class="modal fade bd-example-modal-xl second" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog full_modal-dialog">
+      <div class="modal-content full_modal-content">
+        <img class="modal-post" src="images/syvensteinsee.jpeg" alt="post">
+        <h3>Vacation in Bayern</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet consectetur nulla eu pulvinar. Nullam tempor facilisis ante. Vivamus elementum mattis purus, feugiat ornare purus posuere eget. Fusce nec est vitae dui luctus
+          scelerisque sed eget odio. Curabitur eros diam, viverra vitae ultrices id, facilisis in ante. Sed at imperdiet velit...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet consectetur nulla eu pulvinar. Nullam tempor facilisis ante. Vivamus elementum mattis purus, feugiat ornare purus posuere eget. Fusce nec est vitae dui luctus
+            scelerisque sed eget odio. Curabitur eros diam, viverra vitae ultrices id, facilisis in ante. Sed at imperdiet velit...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet consectetur nulla eu pulvinar. Nullam tempor facilisis ante. Vivamus elementum mattis purus, feugiat ornare purus posuere eget. Fusce nec est vitae dui luctus
+              scelerisque sed eget odio. Curabitur eros diam, viverra vitae ultrices id, facilisis in ante. Sed at imperdiet velit...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet consectetur nulla eu pulvinar. Nullam tempor facilisis ante. Vivamus elementum mattis purus, feugiat ornare purus posuere eget. Fusce nec est vitae dui luctus
+                scelerisque sed eget odio. Curabitur eros diam, viverra vitae ultrices id, facilisis in ante. Sed at imperdiet velit...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet consectetur nulla eu pulvinar. Nullam tempor facilisis ante. Vivamus elementum mattis purus, feugiat ornare purus posuere eget. Fusce nec est vitae dui luctus
+                  scelerisque sed eget odio. Curabitur eros diam, viverra vitae ultrices id, facilisis in ante. Sed at imperdiet velit...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet consectetur nulla eu pulvinar. Nullam tempor facilisis ante. Vivamus elementum mattis purus, feugiat ornare purus posuere eget. Fusce nec est vitae dui luctus
+                    scelerisque sed eget odio. Curabitur eros diam, viverra vitae ultrices id, facilisis in ante. Sed at imperdiet velit...</p>
+      </div>
+      </div>
+    </div>
 
   <!-- Footer -->
   <footer class="w3-center w3-container w3-grey w3-padding-64">
