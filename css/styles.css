@@ -4,16 +4,48 @@ body, html {
   color: #00000;
 }
 
+.full_modal-content {
+  --scrollbarBG: #363636;
+  --thumbBG: #000000;
+}
+
+.full_modal-content::-webkit-scrollbar {
+  width: 11px;
+}
+
+.full_modal-content {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+.full_modal-content::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+.full_modal-content::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
 #home {
   height: auto;
 }
 
-#blog-post1 {
+.first-post {
   background-image: url(../images/salat.jpg);
 }
 
-#blog-post2 {
+.second-post {
   background-image: url(../images/syvensteinsee.jpeg);
+}
+
+.third-post {
+  background-image: url(../images/child-writing.jpg);
+}
+
+.forth-post {
+  background-image: url(../images/cafe.jpg);
 }
 
 /* Create a Parallax Effect */
@@ -24,7 +56,7 @@ body, html {
   background-size: cover;
 }
 
-#blog-post1, #blog-post2 {
+#blog-post {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -47,7 +79,7 @@ body, html {
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-width: 1200px) {
-  #blog-post1, #blog-post2, #salad-post, #bavaria-travel-post {
+  #blog-post, #salad-post, #bavaria-travel-post {
     margin: 2rem 0 0rem 0;
     background-attachment: scroll !important;
     background-size: cover;
@@ -69,7 +101,7 @@ body, html {
   .posted-date {
     margin: 0;
   }
-  .overlay {
+  .overlay1 {
     visibility: hidden;
   }
 }
@@ -80,7 +112,7 @@ body, html {
   }
 }
 
-.overlay {
+.overlay1 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -94,11 +126,11 @@ body, html {
   overflow: hidden;
 }
 
-#blog-post1:hover .overlay {
+#blog-post:hover .overlay1 {
   opacity: 0.75;
 }
 
-#blog-post2:hover .overlay {
+#blog-post:hover .overlay1 {
   opacity: 0.75;
 }
 
@@ -150,6 +182,7 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 5% 5% 5%;
+  opacity: 1;
 }
 
 #bavaria-travel-post {
@@ -180,4 +213,34 @@ a:hover {
   opacity: 0.6;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+.full_modal-dialog {
+  width: 98% !important;
+  height: 92% !important;
+  min-width: 85% !important;
+  min-height: 70% !important;
+  max-width: 90% !important;
+  max-height: 100% !important;
+  padding: 0 !important;
+}
+
+.full_modal-content {
+  height: 99% !important;
+  min-height: 99% !important;
+  max-height: 99% !important;
+  padding: 10px;
+  color: white;
+  background-color: #363636;
+  overflow-y: scroll;
+}
+
+.modal-post {
+   width: 100%;
+   height: 50%;
+   object-fit: cover;
+}
+
+body.modal-open {
+  overflow: visible;
 }
